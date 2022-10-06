@@ -1,0 +1,29 @@
+<div class="background">
+    <div class="container m-5 d-flex justify-content-center">
+      <div class="row mt-5 ">
+        <div class="col ">
+          <h4 class="mb-3">Modificar {{piza.nombre}}</h4>
+          <form class="needs-validation" novalidate>
+  
+            <div class="mb-3">
+              <label for="Ingredientes">Ingredientes</label>
+              <input [(ngModel)]="ingredientes" type="text" class="form-control" name="descripcion" placeholder="Guido, Cesa" required minlength="5">
+            </div>
+  
+            <div class="mb-3">
+              <label for="precio">precio</label>
+              <input [(ngModel)]="precio" type="number" required class="form-control" name="precio" placeholder="">              
+            </div>
+  
+            <div class="mb-3">
+                <label for="peso">Peso</label>
+                <input [(ngModel)]="peso" type="number" required max="1000" min="500" class="form-control" name="stock" placeholder="Cant. Pizas">              
+              </div>  
+            <button class="btn btn-primary btn-lg btn-block" type="button" (click)="crearPiza()">Crear Piza</button>
+            <p class="mt-2" *ngIf="correcto">Se cargo correctamente</p>
+          </form>
+        </div>  
+      </div>
+    </div>
+  </div>
+  

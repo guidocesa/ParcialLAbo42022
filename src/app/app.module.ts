@@ -18,6 +18,11 @@ import { LoginComponent } from './login/login.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { DetalleItemComponent } from './detalle-item/detalle-item.component';
 import { DetallePaisComponent } from './detalle-pais/detalle-pais.component';
+import { PizzasComponent } from './pizzas/pizzas.component';
+import { PizasListComponent } from './pizas-list/pizas-list.component';
+import { AltaPizaComponent } from './alta-piza/alta-piza.component';
+import { ModificarPizaComponent } from './modificar-piza/modificar-piza.component';
+import { BorrarPizaComponent } from './borrar-piza/borrar-piza.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { DetallePaisComponent } from './detalle-pais/detalle-pais.component';
     LoginComponent,
     ItemListComponent,
     DetalleItemComponent,
-    DetallePaisComponent
+    DetallePaisComponent,
+    PizzasComponent,
+    PizasListComponent,
+    AltaPizaComponent,
+    ModificarPizaComponent,
+    BorrarPizaComponent
   ],
   imports: [
     BrowserModule,
