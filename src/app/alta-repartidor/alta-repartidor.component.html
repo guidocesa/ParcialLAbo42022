@@ -6,22 +6,22 @@
           <form class="needs-validation" novalidate>
             <div class="mb-3">
               <label for="dni">DNI</label>
-              <input [(ngModel)]="dni"  type="text" required minlength="7" maxlength="8" class="form-control" name="codigo" placeholder="00.000.000">
+              <input [(ngModel)]="dni"  type="text" required minlength="7" maxlength="8" class="form-control" name="codigo" placeholder="xx.xxx.xxx">
             </div>
   
             <div class="mb-3">
               <label for="nombre">Nombre</label>
-              <input [(ngModel)]="nombre" type="text" class="form-control" name="descripcion" placeholder="Juan Perez" required minlength="5">
+              <input [(ngModel)]="nombre" type="text" class="form-control" name="descripcion" placeholder="Guido, Cesa" required minlength="5">
             </div>
   
             <div class="mb-3">
               <label for="precio">Edad</label>
-              <input [(ngModel)]="edad" type="number" required max="100" min="16" class="form-control" name="precio" placeholder="Años">              
+              <input [(ngModel)]="edad" type="number" required max="100" min="16" class="form-control" name="precio" placeholder="">              
             </div>
   
             <div class="mb-3">
                 <label for="stock">Capacidad de Transporte</label>
-                <input [(ngModel)]="capacidad" type="number" required max="30" min="0" class="form-control" name="stock" placeholder="Pizas">              
+                <input [(ngModel)]="capacidad" type="number" required max="30" min="0" class="form-control" name="stock" placeholder="Cant. Pizas">              
               </div>
   
             <div class="mb-3">
@@ -43,8 +43,8 @@
                 <label for="continente">Continente</label>
                 <select class="custom-select d-block w-100" id="continente" [(ngModel)]="continente" name="continente" required (change)="cambiarTabla()">
                   <option [ngValue]="null" [disabled]="true">Contienente</option>
-                  <option value="europe">EUROPA</option>
-                  <option value="africa">AFRICA</option>
+                  <option value="europe">Europa</option>
+                  <option value="africa">Africa</option>
                 </select>
             </div>
         

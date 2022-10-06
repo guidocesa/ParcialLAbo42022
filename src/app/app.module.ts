@@ -15,6 +15,9 @@ import { environment } from '../environments/environment';
 import { AltaRepartidorComponent } from './alta-repartidor/alta-repartidor.component';
 import { TablaPaisesComponent } from './tabla-paises/tabla-paises.component';
 import { LoginComponent } from './login/login.component';
+import { ItemListComponent } from './item-list/item-list.component';
+import { DetalleItemComponent } from './detalle-item/detalle-item.component';
+import { DetallePaisComponent } from './detalle-pais/detalle-pais.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { LoginComponent } from './login/login.component';
     BienvenidaComponent,
     AltaRepartidorComponent,
     TablaPaisesComponent,
-    LoginComponent
+    LoginComponent,
+    ItemListComponent,
+    DetalleItemComponent,
+    DetallePaisComponent
   ],
   imports: [
     BrowserModule,
