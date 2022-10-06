@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "parcial-6b198": {
+      "hosting": {
+        "ParcialFinal": [
+          "parcial-6b198"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "parcial-6b198"
+  }
+}

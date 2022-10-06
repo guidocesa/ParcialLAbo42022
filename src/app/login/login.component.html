@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="card px-5 py-5" id="form1">
+                <div class="form-data" v-if="!submitted">
+                    <div class="forms-inputs mb-4"> <span>Nombre de usuario</span> <input autocomplete="off" type="text" #email>
+                        <div class="invalid-feedback">A valid email is required!</div>
+                    </div>
+                    <div class="forms-inputs mb-4"> <span>Password</span> <input autocomplete="off" type="password" #pwd>
+                        <div class="invalid-feedback">Password must be 8 character!</div>
+                    </div>
+                    <div class="mb-3"> <button  class="btn btn-dark w-100" style="background-color: rgb(121, 40, 121);" (click)="login(email.value)">Login</button> </div>
+                    <div class="mb-3"> <button  class="btn btn-dark w-100" style="background-color: rgb(121, 40, 121);" (click)="pwd.value = '123456'; email.value = 'parcial@gmail.com'">Inicio Rapido</button> </div>
+                    <div class="mb-3"> <button  class="btn btn-dark w-100" style="background-color: rgb(121, 40, 121);" (click)="pwd.value = '123456'; email.value = 'parcialquenopuedecrear@gmail.com'">Inicio Rapido s/Permisos</button> </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+</div>

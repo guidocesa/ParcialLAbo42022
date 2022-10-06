@@ -1,0 +1,63 @@
+<div class="background">
+    <div class="container m-5 d-flex justify-content-center">
+      <div class="row mt-5 ">
+        <div class="col ">
+          <h4 class="mb-3">Alta Repartidor</h4>
+          <form class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="dni">DNI</label>
+              <input [(ngModel)]="dni"  type="text" required minlength="7" maxlength="8" class="form-control" name="codigo" placeholder="00.000.000">
+            </div>
+  
+            <div class="mb-3">
+              <label for="nombre">Nombre</label>
+              <input [(ngModel)]="nombre" type="text" class="form-control" name="descripcion" placeholder="Juan Perez" required minlength="5">
+            </div>
+  
+            <div class="mb-3">
+              <label for="precio">Edad</label>
+              <input [(ngModel)]="edad" type="number" required max="100" min="16" class="form-control" name="precio" placeholder="Años">              
+            </div>
+  
+            <div class="mb-3">
+                <label for="stock">Capacidad de Transporte</label>
+                <input [(ngModel)]="capacidad" type="number" required max="30" min="0" class="form-control" name="stock" placeholder="Pizas">              
+              </div>
+  
+            <div class="mb-3">
+              <label for="nacionalidad">Nacionalidad</label>
+              <input [(ngModel)]="nacionalidad" type="text" required class="form-control" name="nacionalidad"
+                placeholder="Nacionalidad" disabled>
+            </div>
+  
+            <div class="mb-3">
+                <label for="comestible">Unidad Propia?</label>
+                <select class="custom-select d-block w-100" id="comestible" [(ngModel)]="unidadPropia" name="comestible" required >
+                  <option [ngValue]="null" [disabled]="true">Unidad Propia?</option>
+                  <option value="si">Si</option>
+                  <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="continente">Continente</label>
+                <select class="custom-select d-block w-100" id="continente" [(ngModel)]="continente" name="continente" required (change)="cambiarTabla()">
+                  <option [ngValue]="null" [disabled]="true">Contienente</option>
+                  <option value="europe">EUROPA</option>
+                  <option value="africa">AFRICA</option>
+                </select>
+            </div>
+        
+  
+            <button class="btn btn-primary btn-lg btn-block" type="button" (click)="crearRepartidor()">Crear Repartidor</button>
+            <p class="mt-2" *ngIf="correcto">Se cargo correctamente</p>
+          </form>
+        </div>
+  
+
+        <app-tabla-paises class="col" (paisEmitido)="agarrarPais($event)" [listaPaises]="listaPaises"></app-tabla-paises>
+  
+      </div>
+    </div>
+  </div>
+  
